@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Autoservis ProLine – Osijek</title>
   <meta name="description" content="Autoservis ProLine u Osijeku – limarija, lakiranje, dijagnostika, servisi te zamjena i balansiranje guma. Brzo, pošteno i s jamstvom." />
+  <link rel="canonical" href="https://autoservisproline.eu/">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <style>
     .countdown-box { display:flex; gap: 24px; margin-top: 20px; }
@@ -19,7 +20,9 @@
   <!-- NAVBAR -->
   <header class="sticky top-0 bg-white border-b border-gray-200 z-50">
     <div class="max-w-7xl mx-auto px-4 h-16 flex justify-between items-center">
-      <a href="#hero" class="flex items-center gap-3"><img src="assets/image_0.png" alt="Autoservis ProLine logo" class="h-40 w-auto md:h-48"></a>
+      <a href="#hero" class="flex items-center gap-3">
+        <img src="assets/image_0.png" alt="Autoservis ProLine logo" class="h-40 w-auto md:h-48">
+      </a>
       <nav class="hidden md:flex gap-6 text-sm">
         <a href="#services">Usluge</a>
         <a href="#gallery">Galerija</a>
@@ -29,18 +32,22 @@
     </div>
   </header>
 
-  <!-- HERO (Porsche na cesti) -->
+  <!-- HERO -->
   <section id="hero" class="py-16 bg-gray-100">
     <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center px-4">
       <div>
-        <h1 class="text-4xl font-extrabold leading-tight">ProLine autoservis u Osijeku — <span class="text-gray-600">sigurno i profesionalno.</span></h1>
-        <p class="mt-5 text-lg text-gray-700">Limarija, lakiranje, dijagnostika, servisi te zamjena i balansiranje guma. Brzo, pošteno i s jamstvom.</p>
+        <h1 class="text-4xl font-extrabold leading-tight">
+          ProLine autoservis u Osijeku — <span class="text-gray-600">sigurno i profesionalno.</span>
+        </h1>
+        <p class="mt-5 text-lg text-gray-700">
+          Limarija, lakiranje, dijagnostika, servisi te zamjena i balansiranje guma. Brzo, pošteno i s jamstvom.
+        </p>
         <div class="mt-6 flex gap-3">
           <a href="#contact" class="bg-gray-900 text-white px-6 py-3 rounded-lg">Rezerviraj termin</a>
           <a href="#services" class="border border-gray-300 px-6 py-3 rounded-lg">Pogledaj usluge</a>
         </div>
 
-        <!-- ODBROJAVANJE u hero sekciji -->
+        <!-- ODBROJAVANJE -->
         <h2 class="text-xl font-bold mt-8">Otvorenje servisa – 03.11.2025. u 09:00h</h2>
         <div class="countdown-box">
           <div class="countdown-item"><div id="days">0</div><span>dana</span></div>
@@ -50,7 +57,11 @@
         </div>
       </div>
       <div>
-        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600&auto=format&fit=crop" class="rounded-2xl shadow-lg w-full h-auto" alt="Porsche na cesti – ProLine"/>
+        <img
+          src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600&auto=format&fit=crop"
+          class="rounded-2xl shadow-lg w-full h-auto"
+          alt="Porsche na cesti – ProLine"
+        />
       </div>
     </div>
   </section>
@@ -61,14 +72,14 @@
       const now = new Date().getTime();
       let distance = targetDate - now;
       if (distance < 0) distance = 0;
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const days  = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const secs = Math.floor((distance % (1000 * 60)) / 1000);
-      document.getElementById("days").innerText = days;
+      const mins  = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const secs  = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("days").innerText  = days;
       document.getElementById("hours").innerText = ("0" + hours).slice(-2);
-      document.getElementById("mins").innerText = ("0" + mins).slice(-2);
-      document.getElementById("secs").innerText = ("0" + secs).slice(-2);
+      document.getElementById("mins").innerText  = ("0" + mins).slice(-2);
+      document.getElementById("secs").innerText  = ("0" + secs).slice(-2);
     }
     setInterval(updateCountdown, 1000);
     updateCountdown();
@@ -87,7 +98,6 @@
     </div>
   </section>
 
-  
   <!-- ZAŠTO ODABRATI NAS -->
   <section id="benefits" class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4">
@@ -98,46 +108,46 @@
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="p-6 bg-gray-50 border rounded-xl shadow-sm">
           <h3 class="font-semibold">Besplatan prijevoz kući</h3>
-          <p class="text-gray-700 mt-2">Dok je vaš auto kod nas, <strong>besplatno ćemo vas odvesti kući</strong> – nema taksija, nema brige.</p>
+          <p class="text-gray-700 mt-2">Dok je vaš auto kod nas, <strong>besplatno ćemo vas odvesti kući</strong>.</p>
         </div>
         <div class="p-6 bg-gray-50 border rounded-xl shadow-sm">
           <h3 class="font-semibold">Preuzimanje i dostava vozila</h3>
-          <p class="text-gray-700 mt-2">Možemo <strong>preuzeti vaše vozilo</strong> na adresi i <strong>vratiti ga</strong> nakon servisa kako biste mogli mirno raditi.</p>
+          <p class="text-gray-700 mt-2">Možemo <strong>preuzeti vaše vozilo</strong> i <strong>vratiti ga</strong> nakon servisa.</p>
         </div>
         <div class="p-6 bg-gray-50 border rounded-xl shadow-sm">
           <h3 class="font-semibold">Profesionalni vozači (B kategorija)</h3>
-          <p class="text-gray-700 mt-2">Svi naši vozači su <strong>iskusni profesionalci s B kategorijom</strong> i postupaju s vašim metalnim ljubimcem kao sa svojim.</p>
+          <p class="text-gray-700 mt-2">Iskusni vozači postupaju s vašim automobilom kao sa svojim.</p>
         </div>
       </div>
     </div>
   </section>
 
-<!-- GALERIJA -->
+  <!-- GALERIJA -->
   <section id="gallery" class="py-16 max-w-7xl mx-auto px-4">
     <h2 class="text-3xl font-bold mb-10">Naši radovi</h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       <figure class="bg-white p-4 rounded-xl shadow-sm border">
-        <img src="assets/image_2.png" class="rounded-lg gal-img" alt="Limarija — prije i poslije"/>
+        <img src="assets/image_2.png" class="rounded-lg gal-img" alt="Limarija — prije i poslije">
         <figcaption class="mt-2 text-sm text-gray-700 text-center">Limarija — prije i poslije</figcaption>
       </figure>
       <figure class="bg-white p-4 rounded-xl shadow-sm border">
-        <img src="assets/image_3.png" class="rounded-lg gal-img" alt="Lakiranje u komori — kako mi farbamo"/>
+        <img src="assets/image_3.png" class="rounded-lg gal-img" alt="Lakiranje u komori — kako mi farbamo">
         <figcaption class="mt-2 text-sm text-gray-700 text-center">Lakiranje u komori — kako mi farbamo</figcaption>
       </figure>
       <figure class="bg-white p-4 rounded-xl shadow-sm border">
-        <img src="assets/image_4.png" class="rounded-lg gal-img" alt="Najbolja dijagnostika za sve greške"/>
+        <img src="assets/image_4.png" class="rounded-lg gal-img" alt="Najbolja dijagnostika za sve greške">
         <figcaption class="mt-2 text-sm text-gray-700 text-center">Najbolja dijagnostika za sve greške</figcaption>
       </figure>
       <figure class="bg-white p-4 rounded-xl shadow-sm border">
-        <img src="assets/image_5.png" class="rounded-lg gal-img" alt="Poliranje farova — prije i poslije"/>
+        <img src="assets/image_5.png" class="rounded-lg gal-img" alt="Poliranje farova — prije i poslije">
         <figcaption class="mt-2 text-sm text-gray-700 text-center">Poliranje farova — prije i poslije</figcaption>
       </figure>
       <figure class="bg-white p-4 rounded-xl shadow-sm border">
-        <img src="assets/image_6.png" class="rounded-lg gal-img" alt="Balansiranje guma i montaža"/>
+        <img src="assets/image_6.png" class="rounded-lg gal-img" alt="Balansiranje guma i montaža">
         <figcaption class="mt-2 text-sm text-gray-700 text-center">Balansiranje guma i montaža</figcaption>
       </figure>
       <figure class="bg-white p-4 rounded-xl shadow-sm border">
-        <img src="assets/image_7.png" class="rounded-lg gal-img" alt="Rad na dizalicama"/>
+        <img src="assets/image_7.png" class="rounded-lg gal-img" alt="Rad na dizalicama">
         <figcaption class="mt-2 text-sm text-gray-700 text-center">Rad na dizalicama</figcaption>
       </figure>
     </div>
@@ -149,25 +159,32 @@
       <div>
         <h2 class="text-3xl font-bold">Kontakt i rezervacija</h2>
         <p class="mt-2 text-gray-700">Planirano otvorenje: <strong>03.11.2025.</strong></p>
+
         <form action="https://formspree.io/f/xvgbaprg" method="POST" class="space-y-4">
-        <input type="hidden" name="_subject" value="Novi upit s weba — Autoservis ProLine">
-        <input type="hidden" name="_language" value="hr">
-          <input class="border px-4 py-3 rounded-lg" placeholder="Ime i prezime" / required name="ime">
-          <input class="border px-4 py-3 rounded-lg" placeholder="Email" / required>
-          <input class="border px-4 py-3 rounded-lg" placeholder="Telefon" / required name="telefon">
-          <input type="text" placeholder="Broj šasije (VIN)" class="w-full border rounded-lg p-3" required name="vin">
-        <div class="grid md:grid-cols-2 gap-4">
-          <input type="text" placeholder="Marka vozila" class="w-full border rounded-lg p-3" required name="marka">
-          <input type="text" placeholder="Model vozila" class="w-full border rounded-lg p-3" required name="model">
-        </div>
-        <div class="grid md:grid-cols-2 gap-4">
-          <input type="number" placeholder="Godina proizvodnje" class="w-full border rounded-lg p-3" required name="godina">
-          <input type="text" placeholder="Motor (npr. 2.0 TDI)" class="w-full border rounded-lg p-3" required name="motor">
-        </div>
-        <textarea rows="5" class="border px-4 py-3 rounded-lg" placeholder="Opiši problem ili uslugu" required name="opis"></textarea>
+          <input type="hidden" name="_subject" value="Novi upit s weba — Autoservis ProLine">
+          <input type="hidden" name="_language" value="hr">
+
+          <input class="border px-4 py-3 rounded-lg w-full" name="ime" placeholder="Ime i prezime" required>
+          <input class="border px-4 py-3 rounded-lg w-full" name="email" type="email" placeholder="Email" required>
+          <input class="border px-4 py-3 rounded-lg w-full" name="telefon" placeholder="Telefon" required>
+          <input class="border px-4 py-3 rounded-lg w-full" name="vin" type="text" placeholder="Broj šasije (VIN)" required>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            <input class="border px-4 py-3 rounded-lg w-full" name="marka" type="text" placeholder="Marka vozila" required>
+            <input class="border px-4 py-3 rounded-lg w-full" name="model" type="text" placeholder="Model vozila" required>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            <input class="border px-4 py-3 rounded-lg w-full" name="godina" type="number" placeholder="Godina proizvodnje" required>
+            <input class="border px-4 py-3 rounded-lg w-full" name="motor" type="text" placeholder="Motor (npr. 2.0 TDI)" required>
+          </div>
+
+          <textarea rows="5" class="border px-4 py-3 rounded-lg w-full" name="opis" placeholder="Opiši problem ili uslugu" required></textarea>
+
           <button class="bg-gray-900 text-white px-6 py-3 rounded-lg">Pošalji upit</button>
-        <p class="text-sm text-gray-600 mt-2">Odgovorit ćemo vam i dodijeliti termin u najkraćem mogućem vremenu.</p>
+          <p class="text-sm text-gray-600 mt-2">Odgovorit ćemo vam i dodijeliti termin u najkraćem mogućem vremenu.</p>
         </form>
+
         <div class="mt-6 text-sm text-gray-700 space-y-1">
           <div><strong>Adresa:</strong> Sv. Leopolda B. Mandića 33, Osijek</div>
           <div><strong>Telefon:</strong> +385 99 629 07 92</div>
@@ -175,10 +192,13 @@
           <div><strong>Napomena:</strong> Ako ne znaš do nas, dođi do <em>Caffe bar Focus</em> – ulaz je nedaleko.</div>
         </div>
       </div>
+
       <div>
         <iframe title="Mapa" class="w-full h-80 rounded-lg border" src="https://maps.google.com/maps?q=45.54829,18.66879&z=17&output=embed"></iframe>
+
         <div class="mt-5 p-4 bg-white rounded-lg border flex items-center gap-4">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D45.54829%2C18.66879"
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D45.54829%2C18.66879"
             alt="QR kod – otvori lokaciju ProLine" class="w-28 h-28">
           <div>
             <div class="text-lg font-semibold">📍 Skeniraj i dođi do nas</div>
@@ -191,6 +211,8 @@
     </div>
   </section>
 
-  <footer class="py-8 border-t text-center text-sm text-gray-600">© 2025 Autoservis ProLine – sva prava pridržana.</footer>
+  <footer class="py-8 border-t text-center text-sm text-gray-600">
+    © 2025 Autoservis ProLine – sva prava pridržana.
+  </footer>
 </body>
 </html>
